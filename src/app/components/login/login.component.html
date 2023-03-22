@@ -1,1 +1,40 @@
-<p>login works!</p>
+<section class="clear">
+  <div id="userlogin" class="withmargins">
+    <div class="left">
+      <form [formGroup]="form" class="content" id="form">
+        <h2>Hello!!</h2>
+        <label class="fill top" for="username"><input type="text" formControlName="email" id="username"
+            placeholder="Username"></label>
+        <label class="fill bottom" for="password"><input type="password" formControlName="password" id="password"
+            placeholder="Password"></label>
+        <div class="submit">
+          <label for="login"><input type="text" value="Sign in" id="login" (click)="login()"></label>
+          <label for="signup"><input type="text" value="sign up" id="signup" (click)="signup()"></label>
+        </div>
+        <p class="smallinfo">A healthy attitude is contagious but don't wait to catch it from others. Be a carrier.</p>
+      </form>
+    </div>
+    <div class="right">
+      <div class="slider">
+        <div class="slide">
+          <div class="slide-img-bg">
+            <img
+              src="https://png.pngtree.com/background/20210717/original/pngtree-nurse-holiday-background-picture-image_1424547.jpg">
+          </div>
+          <div class="slide-title">
+            <h3>Live Freely</h3>
+          </div>
+          <div class="slide-description">
+            <p>“Today is your day to start fresh, to eat right, to train hard, to live healthy, to be proud.”</p>
+          </div>
+          <div class="slide-img-content">
+            <img
+              src="https://previews.123rf.com/images/leventegyori/leventegyori1506/leventegyori150600144/41664052-doctor-with-medical-background.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
