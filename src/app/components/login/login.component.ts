@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MedicalPortalService } from 'src/app/services/medical-portal.service';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
 
   form! : FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private _service: MedicalPortalService) {
     this.form = this.fb.group({
       'email': ['', Validators.required],
       'password': ['', Validators.required]
@@ -25,6 +26,15 @@ export class LoginComponent {
   }
 
   signup(){
-    console.log('hello');
+    const data = this.form.value;
+    this._service.signup(data).subscribe((resp) => {
+      if(resp){
+        console.log("signup successful");
+      }
+      else{
+        console.log('error');
+        
+      }
+    })
   }
 }
