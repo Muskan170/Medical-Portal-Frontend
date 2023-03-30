@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MedicalPortalService } from 'src/app/services/medical-portal.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class LoginComponent {
 
   form! : FormGroup;
 
-  constructor(private fb: FormBuilder, private _service: MedicalPortalService) {
+  constructor(private fb: FormBuilder, private _service: MedicalPortalService, private route: Router) {
     this.form = this.fb.group({
       'email': ['', Validators.required],
       'password': ['', Validators.required]
@@ -21,8 +22,15 @@ export class LoginComponent {
   
   login(){
     const data = this.form.value;
-    alert('login')
-    console.log(data);
+    this._service.login(data.email, data.password).subscribe((resp: any) => {
+      console.log(resp);
+      if(resp.success){
+        this.route.navigate(['/admin-dashboard'])
+      }
+      else{
+        alert('Invalid username or pwd')
+      }
+    })
   }
 
   signup(){
@@ -33,7 +41,6 @@ export class LoginComponent {
       }
       else{
         console.log('error');
-        
       }
     })
   }
