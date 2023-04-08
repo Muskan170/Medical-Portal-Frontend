@@ -1,18 +1,19 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationEnd, Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { delay, filter } from 'rxjs';
-import { BreakpointObserver } from '@angular/cdk/layout';
 
 @UntilDestroy()
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.css']
+  selector: 'app-user-dashboard',
+  templateUrl: './user-dashboard.component.html',
+  styleUrls: ['./user-dashboard.component.css']
 })
-export class AdminDashboardComponent {
+export class UserDashboardComponent {
 
+  
   opened = false;
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
@@ -47,8 +48,7 @@ export class AdminDashboardComponent {
   }
   
   logoutClickListener() {
-    console.log('logout');
-    
+    this.router.navigate([''])
   }
-
+  
 }
