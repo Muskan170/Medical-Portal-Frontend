@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="card" *ngFor="let doctor of doctors">
+        <img src="{{doctor.photo}}" alt="First Image">
+        <div class="card-body">
+            <h2 class="card-title">{{doctor.name}}</h2>
+            <p class="card-text">{{doctor.specifications}}</p>
+            <p class="card-text">{{doctor.keywords}}</p>
+            <button class="btn" (click)="navigateTo()">Know More</button>
+        </div>
+    </div>
+</div>

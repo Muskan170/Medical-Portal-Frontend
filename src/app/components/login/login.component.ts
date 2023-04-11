@@ -25,7 +25,12 @@ export class LoginComponent {
     this._service.login(data.email, data.password).subscribe((resp: any) => {
       console.log(resp);
       if(resp.success){
+        if(resp.user.role == "admin"){
         this.route.navigate(['/admin-dashboard'])
+        }
+        else{
+          this.route.navigate(['/user-dashboard'])
+        }
       }
       else{
         alert('Invalid username or pwd')
