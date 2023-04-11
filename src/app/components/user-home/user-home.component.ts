@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-home',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-home.component.css']
 })
 export class UserHomeComponent {
+
+  constructor(private route: Router) {}
 
   doctors = [
     {
@@ -31,5 +34,9 @@ export class UserHomeComponent {
       "photo": "../../../assets/images/doctor2.jpg"
     }
   ]
+
+  navigateTo(){
+    this.route.navigate(['/user-dashboard/book-appointment'])
+  }
   
 }

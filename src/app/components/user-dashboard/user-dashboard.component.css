@@ -22,22 +22,25 @@ mat-toolbar {
     height: 18px;
     font-size: 16px;
   }
+
   /*---------------------------------Side navbar-------------------*/
   mat-sidenav {
-    margin: 16px;
+    margin-top: 5px;
     width: 200px;
     border-right: none;
     color: white;
     padding: 16px;
     text-align: center;
+    background-color: #3f51b5;
+    height: 85vh;
   }
   .content {
     height: calc(100vh - 100px);
-    margin: 16px;
-    margin-left: 32px;
+    margin: 7px;
+    margin-left: 15px;
     padding: 16px;
-    overflow: auto;
-    
+    overflow: hidden;
+    width: 78.2vw;
   }
   mat-sidenav-container {
     height: calc(100vh - 65px);
@@ -63,7 +66,7 @@ mat-toolbar {
   .name {
     margin-top: 8px;
     font-weight: normal;
-    color: black;
+    color: white;
   }
   
   
@@ -72,4 +75,16 @@ mat-toolbar {
     margin-bottom: 16px;
     background-color: rgba(255, 255, 255, 0.5);
   }
-  
+
+span {
+  color: white;
+}
+
+mat-icon {
+  color: white;
+}
+
+mat-sidenav-content {
+  overflow: hidden;
+  height: 86vh;
+}

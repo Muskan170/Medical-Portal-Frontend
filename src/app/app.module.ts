@@ -19,6 +19,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
+import { BookAppointmentComponent } from './components/book-appointment/book-appointment.component';
+import { AgGridModule } from 'ag-grid-angular';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     AdminAppointmentsComponent,
     UserDashboardComponent,
     UserHomeComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    BookAppointmentComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -42,7 +45,8 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
     MatSidenavModule,
     BrowserAnimationsModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
