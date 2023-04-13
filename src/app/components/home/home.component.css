@@ -105,7 +105,7 @@ body {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	height: auto;
+	height: 80vh;
 	background-color: #F5F5F5;
 }
 
@@ -122,6 +122,21 @@ body {
 	text-shadow: 1px 1px 4px #000000;
 }
 
+.titular .searchBox {
+	font-size: 15px;
+	font-weight: 700;
+	color: black;
+	border: 2px solid white;
+	border-radius: 10px;
+	position: absolute;
+  	top: 8%;
+  	right: 67%;
+  	transform: translate(-50%, -50%);
+	padding: 8px 25px;
+  	cursor: pointer;
+	height: 7.5vh;
+	/* background-color: transparent; */
+}
 @keyframes effect { 
 	0% { 
 		color: #FFF;
@@ -174,7 +189,7 @@ body {
 	border: none;
 	border-radius: 5px;
 	position: absolute;
-  margin-top: 450px;
+  margin-top: 70vh;
   left: 50%;
   transform: translate(-50%, -50%);
 	padding: 12px 25px;
