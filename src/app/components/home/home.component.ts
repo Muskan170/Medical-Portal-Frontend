@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
+}
 }
