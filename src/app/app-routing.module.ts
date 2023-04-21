@@ -8,8 +8,8 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { AdminProfileComponent } from './components/admin-profile/admin-profile.component';
 import { AdminAppointmentsComponent } from './components/admin-appointments/admin-appointments.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BookAppointmentComponent } from './components/book-appointment/book-appointment.component';
+import { KnowMoreComponent } from './components/know-more/know-more.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -22,8 +22,8 @@ const routes: Routes = [
 },
   {path: "user-dashboard", component: UserDashboardComponent, children: [
     {path: "user-home", component: UserHomeComponent},
-    {path: "user-profile", component: UserProfileComponent},
-    {path: "book-appointment", component: BookAppointmentComponent}
+    {path: "user-appointments", component: BookAppointmentComponent},
+    {path: "know-more", component: KnowMoreComponent}
   ]
 },
   

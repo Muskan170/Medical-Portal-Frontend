@@ -18,9 +18,14 @@ import {MatListModule} from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { UserHomeComponent } from './components/user-home/user-home.component';
-import { UserProfileComponent } from './components/user-profile/user-profile.component';
 import { BookAppointmentComponent } from './components/book-appointment/book-appointment.component';
 import { AgGridModule } from 'ag-grid-angular';
+import {MatCardModule} from '@angular/material/card';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatTableModule } from '@angular/material/table';
+import { MatInputModule } from '@angular/material/input';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { KnowMoreComponent } from './components/know-more/know-more.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +37,8 @@ import { AgGridModule } from 'ag-grid-angular';
     AdminAppointmentsComponent,
     UserDashboardComponent,
     UserHomeComponent,
-    UserProfileComponent,
-    BookAppointmentComponent
+    BookAppointmentComponent,
+    KnowMoreComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -46,7 +51,12 @@ import { AgGridModule } from 'ag-grid-angular';
     BrowserAnimationsModule,
     MatListModule,
     MatMenuModule,
-    AgGridModule
+    AgGridModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatInputModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
