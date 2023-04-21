@@ -11,12 +11,16 @@ export class MedicalPortalService {
   constructor(private httpClient: HttpClient) { }
 
    //signup i.e register user
-   signup(data: Object): Observable<Response> {
+  signup(data: Object): Observable<Response> {
     return this.httpClient.post<Response>(Constant.signup, data);
   }
 
   login(email: string, password: string){
     const body = {email: email, password: password}
     return this.httpClient.post(Constant.login, body)
+  }
+
+  getDoctors(){
+    return this.httpClient.get<Response>(Constant.getdoctors);
   }
 }
