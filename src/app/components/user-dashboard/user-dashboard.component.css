@@ -35,11 +35,10 @@ mat-toolbar {
     height: 85vh;
   }
   .content {
-    height: calc(100vh - 100px);
+    /* height: calc(100vh - 100px); */
     margin: 7px;
     margin-left: 15px;
     padding: 16px;
-    overflow: hidden;
     width: 78.2vw;
   }
   mat-sidenav-container {
@@ -82,9 +81,4 @@ span {
 
 mat-icon {
   color: white;
-}
-
-mat-sidenav-content {
-  overflow: hidden;
-  height: 96.5%;
 }

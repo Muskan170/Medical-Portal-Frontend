@@ -10,6 +10,7 @@ import { AdminAppointmentsComponent } from './components/admin-appointments/admi
 import { UserHomeComponent } from './components/user-home/user-home.component';
 import { BookAppointmentComponent } from './components/book-appointment/book-appointment.component';
 import { KnowMoreComponent } from './components/know-more/know-more.component';
+import { UserAppointmentComponent } from './components/user-appointment/user-appointment.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path: "user-dashboard", component: UserDashboardComponent, children: [
     {path: "user-home", component: UserHomeComponent},
     {path: "user-appointments", component: BookAppointmentComponent},
-    {path: "know-more", component: KnowMoreComponent}
+    {path: "know-more/:id", component: KnowMoreComponent},
+    {path: "appoint", component: UserAppointmentComponent}
   ]
 },
   

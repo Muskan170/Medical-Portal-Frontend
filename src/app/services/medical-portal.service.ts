@@ -23,4 +23,8 @@ export class MedicalPortalService {
   getDoctors(){
     return this.httpClient.get<Response>(Constant.getdoctors);
   }
+
+  getDoctorById(id: any): Observable<any>{
+    return this.httpClient.get<Response>(Constant.getDoctorById + id)
+  }
 }
