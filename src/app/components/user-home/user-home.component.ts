@@ -69,8 +69,8 @@ export class UserHomeComponent implements OnInit{
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  goToKnowMore(){
-    this.router.navigate(['/user-dashboard/know-more'])
+  goToKnowMore(id: Number){
+    this.router.navigate(['/user-dashboard/know-more',id])
   }
   
 }

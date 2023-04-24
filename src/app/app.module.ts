@@ -26,6 +26,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { KnowMoreComponent } from './components/know-more/know-more.component';
+import { UserAppointmentComponent } from './components/user-appointment/user-appointment.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { KnowMoreComponent } from './components/know-more/know-more.component';
     UserDashboardComponent,
     UserHomeComponent,
     BookAppointmentComponent,
-    KnowMoreComponent
+    KnowMoreComponent,
+    UserAppointmentComponent
   ],
   imports: [
     ReactiveFormsModule,

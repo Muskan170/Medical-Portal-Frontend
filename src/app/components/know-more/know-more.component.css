@@ -1,0 +1,107 @@
+.card {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    height: 78vh;
+  }
+  
+  /* .card-img {
+    flex: 0 0 auto;
+    width: 200px;
+    overflow: hidden;
+  } */
+  
+  .card-img img {
+    height: 78vh;
+    width: 30vw;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* .card:hover .card-img img {
+    transform: scale(1.1);
+  } */
+  
+  .card-content {
+    flex: 1 1 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+  }
+  
+  .card-title {
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  
+  .card-description {
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  
+  .card-link {
+    display: inline-block;
+    font-size: 14px;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .card-link:hover {
+    color: #0056b3;
+  }
+  
+.btns{
+    display: flex;
+    margin-top: 20vh;
+}
+
+.btns .btn_appoint{
+    width: 15vw;
+    height: 7vh;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid #0056b3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.btns .btn_online{
+    margin-left: 13vw;
+    width: 15vw;
+    height: 7vh;
+    border: none;
+    cursor: pointer;
+    border-bottom: 2px solid #0056b3;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin-top: 5vh;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  
+  .table th {
+    background-color: #f9f9f9;
+    font-weight: bold;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody td {
+    vertical-align: middle;
+  }
+
+  
