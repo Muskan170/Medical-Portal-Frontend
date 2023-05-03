@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MedicalPortalService } from 'src/app/services/medical-portal.service';
 
 @Component({
   selector: 'app-user-appointment',
@@ -7,8 +9,29 @@ import { Component } from '@angular/core';
 })
 export class UserAppointmentComponent {
 
-  submitAppointment(){
-    console.log('submit appointment');
+  form! : FormGroup;
+  
+  constructor(private fb: FormBuilder, private _service: MedicalPortalService) {
+    this.form = this.fb.group({
+      'fullName': ['', Validators.required],
+      'phone': ['', Validators.required],
+      'emailAddress': ['', Validators.required],
+      'appointmentDate': ['', Validators.required],
+      'appointmentTime': ['' ,Validators.required]
+    })
+  }
+  
+  submitAppointment(event: any){
+    event.preventDefault();
+    const data = this.form.value;
+    this._service.appointmentSchedule(data.fullName, data.phone, data.emailAddress, data.appointmentDate, data.appointmentTime).subscribe((resp: any) => {
+      if(resp){
+        this._service.sharedNotification("Appointment Scheduled Successfully", "OK");
+      }
+      else{
+        this._service.sharedNotification("Could not schedule", "OK")
+      }
+    })
     
   }
 }

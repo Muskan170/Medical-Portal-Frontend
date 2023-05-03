@@ -89,9 +89,9 @@ body{
 } */
 
 /* Structure */
-table {
-    width: 100%;
-  }
+/* table {
+    width: 80%;
+  } */
   
   .mat-mdc-form-field {
     font-size: 14px;
@@ -107,6 +107,24 @@ table {
     height: 5vh;
     width: 10vw;
     border: none;
-    border-top: 2px solid #3f51b5;
+    background-color: #F15F79 !important;
+    border-radius: 5px;
     cursor: pointer;
+    color: white;
+    /* margin-left: 10vw; */
+}
+
+.mat-mdc-table .mdc-data-table__header-row {
+    height: 56px;
+    background-color: #457fca !important;
+}
+
+.view{
+    color: aliceblue;
+}
+
+.mat-mdc-table {
+    table-layout: auto;
+    white-space: normal;
+    border-bottom: 3px solid #457fca !important;
 }

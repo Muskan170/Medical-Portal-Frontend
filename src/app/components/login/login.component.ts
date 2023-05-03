@@ -22,18 +22,20 @@ export class LoginComponent {
   
   login(){
     const data = this.form.value;
+    localStorage.setItem('loginEmail', data.email)
     this._service.login(data.email, data.password).subscribe((resp: any) => {
       console.log(resp);
       if(resp.success){
+        this._service.sharedNotification("Login successfull","OK")
         if(resp.user.role == "admin"){
-        this.route.navigate(['/admin-dashboard'])
+        this.route.navigate(['/admin-dashboard/admin-home'])
         }
-        else{
-          this.route.navigate(['/user-dashboard'])
+        else if(resp.user.role == 'User'){
+          this.route.navigate(['/user-dashboard/user-home'])
         }
       }
       else{
-        alert('Invalid username or pwd')
+        this._service.sharedNotification("Invalid Credentials","OK")
       }
     })
   }
@@ -42,10 +44,10 @@ export class LoginComponent {
     const data = this.form.value;
     this._service.signup(data).subscribe((resp) => {
       if(resp){
-        console.log("signup successful");
+        this._service.sharedNotification("Signup successfull","OK")
       }
       else{
-        console.log('error');
+        this._service.sharedNotification("Could not signup","OK")
       }
     })
   }

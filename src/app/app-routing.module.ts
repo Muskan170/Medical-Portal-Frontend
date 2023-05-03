@@ -11,6 +11,7 @@ import { UserHomeComponent } from './components/user-home/user-home.component';
 import { BookAppointmentComponent } from './components/book-appointment/book-appointment.component';
 import { KnowMoreComponent } from './components/know-more/know-more.component';
 import { UserAppointmentComponent } from './components/user-appointment/user-appointment.component';
+import { AllDoctorsComponent } from './components/all-doctors/all-doctors.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -18,7 +19,8 @@ const routes: Routes = [
   {path: "admin-dashboard", component: AdminDashboardComponent, children: [
     {path: "admin-home", component: AdminHomeComponent},
     {path: "admin-profile", component: AdminProfileComponent},
-    {path: "admin-appointments", component: AdminAppointmentsComponent}
+    {path: "admin-appointments", component: AdminAppointmentsComponent},
+    {path: "all-doctors", component: AllDoctorsComponent}
   ]
 },
   {path: "user-dashboard", component: UserDashboardComponent, children: [

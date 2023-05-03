@@ -16,6 +16,8 @@ export class UserDashboardComponent {
   
   opened = false;
 
+  user: any = localStorage.getItem('loginEmail')
+
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
 
 

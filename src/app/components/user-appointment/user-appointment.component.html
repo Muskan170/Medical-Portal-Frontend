@@ -9,7 +9,7 @@
         <header class="subHeader">
           Welcome to <b>Medical Portal!</b> Please Enter your Details
         </header>
-        <form>
+        <form [formGroup]="form" class="content" id="form">
           <div class="inputContainer">
             <label class="label" for="fullName"
               ><img
@@ -21,6 +21,7 @@
               type="text"
               class="input"
               id="fullName"
+              formControlName="fullName" 
               placeholder="Enter your Full Name"
             />
           </div>
@@ -35,6 +36,7 @@
               type="number"
               class="input"
               id="phone"
+              formControlName="phone" 
               placeholder="Enter your Phone Number"
             />
           </div>
@@ -49,6 +51,7 @@
               type="email"
               class="input"
               id="emailAddress"
+              formControlName="emailAddress" 
               placeholder="Enter your Email Address"
             />
           </div>
@@ -63,6 +66,7 @@
               type="date"
               class="input"
               id="appointmentDate"
+              formControlName="appointmentDate" 
               placeholder="Enter your Appointment Date"
             />
           </div>
@@ -77,11 +81,12 @@
               type="time"
               class="input"
               id="appointmentTime"
+              formControlName="appointmentTime" 
               placeholder="Enter your Appointment Time"
             />
           </div>
           
-          <button class="LoginButton" (click)="submitAppointment()">Submit Request</button>
+          <button class="LoginButton" (click)="submitAppointment($event)">Submit Request</button>
         </form>
       </div>
     </div>
