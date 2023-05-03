@@ -16,7 +16,7 @@
   
           <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon>
         </button>
-        <mat-menu #menu="matMenu">
+        <mat-menu #menu="matMenu" style="margin-left:50vw">
           <button mat-menu-item (click)="logoutClickListener()">
             <mat-icon>exit_to_app</mat-icon>
             Logout
@@ -36,15 +36,19 @@
     <h4 class="name">Account Details</h4>
     <mat-divider></mat-divider>
       <button mat-button class="menu-button" routerLink="/admin-dashboard/admin-home">
-        <mat-icon>home</mat-icon>
-        <span>Home</span>
+        <mat-icon>dashboard</mat-icon>
+        <span>Dashboard</span>
       </button>
       <button mat-button class="menu-button" routerLink="/admin-dashboard/admin-appointments">
-        <mat-icon>dashboard</mat-icon>
+        <mat-icon>insert_invitation</mat-icon>
         <span>My Appointments</span>
       </button>
+      <button mat-button class="menu-button" routerLink="/admin-dashboard/all-doctors">
+        <mat-icon>person_pin</mat-icon>
+        <span>All Doctors</span>
+      </button>
       <button mat-button class="menu-button" routerLink="/admin-dashboard/admin-profile">
-        <mat-icon>info</mat-icon>
+        <mat-icon>person</mat-icon>
         <span>Profile</span>
       </button>
    </mat-sidenav>

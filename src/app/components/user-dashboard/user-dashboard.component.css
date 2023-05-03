@@ -42,7 +42,7 @@ mat-toolbar {
     width: 78.2vw;
   }
   mat-sidenav-container {
-    height: calc(100vh - 65px);
+    height: calc(100vh - 85px);
   }
   .menu-button {
     width: 100%;

@@ -47,8 +47,7 @@ export class AdminDashboardComponent {
   }
   
   logoutClickListener() {
-    console.log('logout');
-    
+    this.router.navigate([''])
   }
 
 }

@@ -27,6 +27,8 @@ import { MatInputModule } from '@angular/material/input';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { KnowMoreComponent } from './components/know-more/know-more.component';
 import { UserAppointmentComponent } from './components/user-appointment/user-appointment.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AllDoctorsComponent } from './components/all-doctors/all-doctors.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,8 @@ import { UserAppointmentComponent } from './components/user-appointment/user-app
     UserHomeComponent,
     BookAppointmentComponent,
     KnowMoreComponent,
-    UserAppointmentComponent
+    UserAppointmentComponent,
+    AllDoctorsComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -58,7 +61,9 @@ import { UserAppointmentComponent } from './components/user-appointment/user-app
     MatFormFieldModule,
     MatTableModule,
     MatInputModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

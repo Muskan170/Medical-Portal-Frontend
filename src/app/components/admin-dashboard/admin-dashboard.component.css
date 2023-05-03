@@ -38,7 +38,7 @@ mat-sidenav {
   margin: 7px;
   margin-left: 15px;
   padding: 16px;
-  overflow: hidden;
+  overflow: scroll;
   width: 78.2vw;
   
 }

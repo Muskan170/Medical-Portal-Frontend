@@ -1,1 +1,20 @@
-<p>book-appointment works!</p>
+   <div class="center" *ngFor="let booking of booking">
+    <ul>
+      <li>
+        <div class="image">
+          <img src="https://www.kindpng.com/picc/m/382-3825510_flat-people-icon-png-transparent-png.png" alt="">
+          
+          <h4>{{booking.fullName}}</h4>
+        </div>
+        
+        <div class="text-group">
+           Appointment details are as follows:
+        </div>
+        
+        <div class="date-group">
+          <h4>Date - {{date.appointmentDate}}</h4>
+          <h4>Time slot - {{booking.appointmentTime}}</h4>
+        </div>
+      </li>
+    </ul>
+  </div>
