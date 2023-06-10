@@ -16,9 +16,11 @@ export class AdminDashboardComponent {
   opened = false;
 
   @ViewChild(MatSidenav) sidenav!: MatSidenav;
+  admin: any
 
-
-  constructor(private observer: BreakpointObserver, private router: Router) {}
+  constructor(private observer: BreakpointObserver, private router: Router) {
+    this.admin = localStorage.getItem('loginEmail')
+  }
   
   ngAfterViewInit() {
     this.observer
@@ -47,6 +49,7 @@ export class AdminDashboardComponent {
   }
   
   logoutClickListener() {
+    localStorage.clear()
     this.router.navigate([''])
   }
 

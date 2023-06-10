@@ -50,6 +50,7 @@ export class UserDashboardComponent {
   }
   
   logoutClickListener() {
+    localStorage.clear()
     this.router.navigate([''])
   }
   

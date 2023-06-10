@@ -29,6 +29,10 @@ import { KnowMoreComponent } from './components/know-more/know-more.component';
 import { UserAppointmentComponent } from './components/user-appointment/user-appointment.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AllDoctorsComponent } from './components/all-doctors/all-doctors.component';
+import { EmergencysosComponent } from './components/emergencysos/emergencysos.component';
+import { AddDoctorComponent } from './components/add-doctor/add-doctor.component';
+import { ForgotComponent } from './components/forgot/forgot.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,10 @@ import { AllDoctorsComponent } from './components/all-doctors/all-doctors.compon
     BookAppointmentComponent,
     KnowMoreComponent,
     UserAppointmentComponent,
-    AllDoctorsComponent
+    AllDoctorsComponent,
+    EmergencysosComponent,
+    AddDoctorComponent,
+    ForgotComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -63,7 +70,8 @@ import { AllDoctorsComponent } from './components/all-doctors/all-doctors.compon
     MatInputModule,
     MatPaginatorModule,
     MatSnackBarModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

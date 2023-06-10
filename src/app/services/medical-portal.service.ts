@@ -15,9 +15,9 @@ export class MedicalPortalService {
     return this.httpClient.post<Response>(Constant.signup, data);
   }
 
-  login(email: string, password: string) {
-    const body = { email: email, password: password };
-    return this.httpClient.post(Constant.login, body);
+  login(data: Object) {
+    // const body = { email: email, password: password };
+    return this.httpClient.post(Constant.login, data);
   }
 
   getDoctors() {
@@ -30,6 +30,7 @@ export class MedicalPortalService {
 
   appointmentSchedule(
     fullName: string,
+    doctorName: string,
     phone: string,
     emailAddress: string,
     appointmentDate: string,
@@ -37,6 +38,7 @@ export class MedicalPortalService {
   ) {
     const body = {
       fullName: fullName,
+      doctorName: doctorName,
       phone: phone,
       emailAddress: emailAddress,
       appointmentDate: appointmentDate,
@@ -47,6 +49,10 @@ export class MedicalPortalService {
 
   getAppointmentsForUser(email: string){
     return this.httpClient.get(Constant.getAppointmentForUser + email)
+  }
+
+  updatePassword(data: Object){
+    return this.httpClient.put(Constant.updatePassword, data)
   }
 
   sharedNotification(display: string, Buttontext: string) {

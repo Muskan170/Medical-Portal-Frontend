@@ -8,4 +8,5 @@ export module Constant {
     export const getDoctorById: string = `${baseUrl}/doctors/doctor-by-id?id=`
     export const appoint: string = `${baseUrl}/user/appoint`
     export const getAppointmentForUser = `${baseUrl}/user/my-appointments/`
+    export const updatePassword = `${baseUrl}/login/update-password`
 }

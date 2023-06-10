@@ -1,0 +1,25 @@
+
+<div class="container">
+<h1 id="title">Doctor Profile Form</h1>
+<p id="description">Thank you for registering. Please provide us with all below details to add you in our group.</p>
+<fieldset>
+</fieldset>
+<form [formGroup]="form" class="content" id="form">
+<label id="name-label" for="name">Full Name<input id="name" formControlName="name" type="text" placeholder="Enter your name" required name="name"></label>
+<!-- <label id="email-label" for="email">Email Address<input id="email" type="email" placeholder="Enter your Email" required name="email"></label> -->
+<label id="number-label" for="age">Age<input id="age" formControlName="age" type="number" placeholder="Age" min="18" max="99" name="number"></label>
+<label for="gender">Gender
+    <select id="dropdown" name="dropdown" formControlName="gender">
+      <option value=" ">Select One</option>
+      <option value=" ">Male</option>
+      <option value="1">Female</option>
+      <option value="2">Others</option>
+    </select> 
+    </label>
+    <label id="address-label" for="address">Full Address<input id="address" type="text" formControlName="address" placeholder="Enter your full address" required name="address"></label>
+    <label id="phone-label" for="phone">Mobile Number<input id="phone" formControlName="phone" type="text" placeholder="Enter your mobile number" required name="phone"></label>
+    <label id="fees-label" for="fees">Fees<input id="fees" type="number" placeholder="Enter your fees" required name="fees"></label>
+    <label id="image-label" for="image">Image<input id="image" type="url" placeholder="Profile Photo" required name="image"></label>
+<button id="submit" type="submit" class="submit" (click)="addDoctor()"><b>Submit</b></button>
+  </form>
+  </div>
