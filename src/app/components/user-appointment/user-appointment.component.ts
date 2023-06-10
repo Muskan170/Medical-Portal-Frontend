@@ -14,17 +14,23 @@ export class UserAppointmentComponent {
   constructor(private fb: FormBuilder, private _service: MedicalPortalService) {
     this.form = this.fb.group({
       'fullName': ['', Validators.required],
+      'doctorName': ['', Validators.required],
       'phone': ['', Validators.required],
       'emailAddress': ['', Validators.required],
       'appointmentDate': ['', Validators.required],
       'appointmentTime': ['' ,Validators.required]
     })
   }
+
+  ngOnInit(){
+    const dr = localStorage.getItem('doctor')
+    this.form.controls['doctorName'].setValue(dr);
+  }
   
   submitAppointment(event: any){
     event.preventDefault();
     const data = this.form.value;
-    this._service.appointmentSchedule(data.fullName, data.phone, data.emailAddress, data.appointmentDate, data.appointmentTime).subscribe((resp: any) => {
+    this._service.appointmentSchedule(data.fullName,data.doctorName, data.phone, data.emailAddress, data.appointmentDate, data.appointmentTime).subscribe((resp: any) => {
       if(resp){
         this._service.sharedNotification("Appointment Scheduled Successfully", "OK");
       }

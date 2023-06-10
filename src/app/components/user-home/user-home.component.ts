@@ -33,7 +33,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 export class UserHomeComponent implements OnInit{
 
-  displayedColumns = ['id','name','gender','view']
+  displayedColumns = ['id','name','gender','keyword','view']
   dataSource: any
   doctors: any = []
 
@@ -69,7 +69,7 @@ export class UserHomeComponent implements OnInit{
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  goToKnowMore(id: Number){
+  goToKnowMore(id: any){
     this.router.navigate(['/user-dashboard/know-more',id])
   }
   

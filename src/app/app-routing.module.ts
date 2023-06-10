@@ -12,10 +12,16 @@ import { BookAppointmentComponent } from './components/book-appointment/book-app
 import { KnowMoreComponent } from './components/know-more/know-more.component';
 import { UserAppointmentComponent } from './components/user-appointment/user-appointment.component';
 import { AllDoctorsComponent } from './components/all-doctors/all-doctors.component';
+import { EmergencysosComponent } from './components/emergencysos/emergencysos.component';
+import { AddDoctorComponent } from './components/add-doctor/add-doctor.component';
+import { ForgotComponent } from './components/forgot/forgot.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
+  {path:"emergency", component: EmergencysosComponent},
   {path: "login", component: LoginComponent},
+  {path: "form", component: AddDoctorComponent},
+  {path: "forgotPage", component: ForgotComponent},
   {path: "admin-dashboard", component: AdminDashboardComponent, children: [
     {path: "admin-home", component: AdminHomeComponent},
     {path: "admin-profile", component: AdminProfileComponent},

@@ -1,12 +1,16 @@
 <div class="card">
     <div class="card-img">
-      <img src={{specificDoctor.image}} alt="Image">
+      <img src={{specificDoctor.imageOfDoctor}} alt="Image">
     </div>
     <div class="card-content">
-      <h2 class="card-title">NAME: {{specificDoctor.name}}</h2>
-      <p class="card-description">GENDER: {{specificDoctor.gender}}</p>
-      <p class="card-description">CITY: {{specificDoctor.address.city}}</p>
-      <p class="card-description">PHONE: {{specificDoctor.phone}}</p>
+      <h2 class="card-title">NAME: {{specificDoctor.nameOfDoctor}}</h2>
+      <br>
+      <p class="card-description">Gender/Age: {{specificDoctor.gender}}/{{specificDoctor.age}}</p>
+      <p class="card-description1">Clinic Address: {{specificDoctor.clinincAddress}}</p>
+      <p class="card-description2">PHONE: {{specificDoctor.phone}}</p>
+      <p class="card-description">Speciality: {{specificDoctor.speciality}}</p>
+      <p class="card-description1">Fees: {{specificDoctor.fees}}</p>
+      <p class="card-description2">Reviews: {{specificDoctor.reviews[0].points}}/10 star</p>
       <table class="table">
         <thead>
           <tr>
@@ -19,18 +23,17 @@
         </thead>
         <tbody>
           <tr>
-            <td>{{specificDoctor.availability.Monday}}</td>
-            <td>{{specificDoctor.availability.Tuesday}}</td>
-            <td>{{specificDoctor.availability.Wednesday}}</td>
-            <td>{{specificDoctor.availability.Thursday}}</td>
-            <td>{{specificDoctor.availability.Friday}}</td>
+            <td>{{specificDoctor.appointmentTimeSlots.Monday || "-"}}</td>
+            <td>{{specificDoctor.appointmentTimeSlots.Tuesday || "-"}}</td>
+            <td>{{specificDoctor.appointmentTimeSlots.Wednesday || "-"}}</td>
+            <td>{{specificDoctor.appointmentTimeSlots.Thursday || "-"}}</td>
+            <td>{{specificDoctor.appointmentTimeSlots.Friday || "-"}}</td>
           </tr>
         </tbody>
       </table>
       
       <div class="btns">
       <button class="btn_appoint" (click)="gotoAppointment()">Take Appointment</button>
-      <button class="btn_online">Schedule Online</button>
     </div>
     </div>
   </div>

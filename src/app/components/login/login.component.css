@@ -13,6 +13,21 @@
   margin: 0 auto;
 }
 
+.role{
+  height: 7vh;
+  width: 24vw;
+  margin-bottom: 5vh;
+  background: #252030;
+  color: #c6cfd8;
+}
+
+.forgot a{
+  color: whitesmoke;
+  margin-left: 15vw;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3 {

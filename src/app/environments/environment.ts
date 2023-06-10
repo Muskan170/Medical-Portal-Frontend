@@ -1,4 +1,7 @@
 export const environment = {
   baseURL: "http://localhost:4040",
-  production: false
+  production: false,
+  mapbox:{
+    accessToken: "mwdwdyedjbdad"
+  }
 };

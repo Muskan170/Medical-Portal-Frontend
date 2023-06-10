@@ -3,13 +3,26 @@
     <div class="left">
       <form [formGroup]="form" class="content" id="form">
         <h2>Hello!!</h2>
-        <label class="fill top" for="username"><input type="text" formControlName="email" id="username"
+        <label class="fill top" for="username"><input type="text" formControlName="email" id="username" class="form-control"
             placeholder="Username"></label>
         <label class="fill bottom" for="password"><input type="password" formControlName="password" id="password"
             placeholder="Password"></label>
+            <select
+            class="role"
+            (change)="changeRole($event)"
+            formControlName="role"
+          >
+            <option value="">Choose Role</option>
+            <option *ngFor="let role of role" [ngValue]="role">
+              {{ role }}
+            </option>
+          </select>
         <div class="submit">
-          <label for="login"><input type="submit" value="Sign in" id="login" (click)="login()"></label>
-          <label for="signup"><input type="submit" value="sign up" id="signup" (click)="signup()"></label>
+          <label for="login"><input type="submit" value="Log in" id="login" (click)="login()"></label>
+          <label for="signup"><input type="submit" value="Register" id="signup" (click)="signup()"></label>
+        </div>
+        <div class="forgot">
+          <a (click)="gotoForgotPage()">Forgot Password</a>
         </div>
         <p class="smallinfo">A healthy attitude is contagious but don't wait to catch it from others. Be a carrier.</p>
       </form>

@@ -14,17 +14,15 @@ export class KnowMoreComponent implements OnInit{
   specificDoctor: any
 
   ngOnInit() {
-    this.route.params.subscribe((resp) => {
-      console.log(resp['id']);
+    this.route.params.subscribe((resp: any) => {
       this.service.getDoctorById(resp['id']).subscribe((data) => {
         this.specificDoctor = data.doctorById[0];
-        console.log(this.specificDoctor);
-        
       })
     })
   }
 
   gotoAppointment(){
+    localStorage.setItem('doctor',this.specificDoctor.nameOfDoctor)
     this.router.navigate(['/user-dashboard/appoint'])
   }
 }
