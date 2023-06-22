@@ -32,7 +32,7 @@ export class ForgotComponent {
       }
       // data1.password = Buffer.from(data1.password).toString('base64');
       this._service.updatePassword(data1).subscribe((resp) => {
-        console.log("updated");
+        this._service.sharedNotification("Password updated", "OK")
         
       })
     }

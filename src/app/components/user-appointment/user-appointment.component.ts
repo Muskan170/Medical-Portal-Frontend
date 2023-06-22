@@ -25,6 +25,9 @@ export class UserAppointmentComponent {
   ngOnInit(){
     const dr = localStorage.getItem('doctor')
     this.form.controls['doctorName'].setValue(dr);
+
+    const de = localStorage.getItem('doctorEmail')
+    this.form.controls['emailAddress'].setValue(de);
   }
   
   submitAppointment(event: any){

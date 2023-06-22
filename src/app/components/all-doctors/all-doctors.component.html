@@ -12,8 +12,8 @@
           </h2>
           <ul>
             <li><a> {{doctor.clinincAddress}} </a></li>
-            <li><a> {{doctor.speciality[0]}} | {{doctor.speciality[1]}} </a></li>
-            <li><a> {{doctor.keywordsRelatedToSpeciality[0]}} | {{doctor.keywordsRelatedToSpeciality[1]}} </a></li>
+            <li><a *ngIf="doctor.speciality[0] != '' "> {{doctor.speciality[0]}} | {{doctor.speciality[1]}} </a></li>
+            <!-- <li><a *ngIf="doctor.keywordsRelatedToSpeciality[0] != '' "> {{doctor.keywordsRelatedToSpeciality[0]}} | {{doctor.keywordsRelatedToSpeciality[1]}} </a></li> -->
           </ul>
         </div>
       </div>

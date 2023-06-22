@@ -55,9 +55,17 @@ export class MedicalPortalService {
     return this.httpClient.put(Constant.updatePassword, data)
   }
 
+  addDoctor(data: Object){
+    return this.httpClient.post(Constant.addDoctor, data)
+  }
+
+  updateDoctor(data: Object){
+    return this.httpClient.post(Constant.updateDoctor, data)
+  }
+
   sharedNotification(display: string, Buttontext: string) {
     this.snackBar.open(display, Buttontext, {
-      duration: 100000,
+      duration: 50000,
       horizontalPosition: 'right',
       verticalPosition: 'top',
     });
