@@ -10,19 +10,24 @@ import { MedicalPortalService } from 'src/app/services/medical-portal.service';
 export class AddDoctorComponent {
 
   form! : FormGroup;
+  data: any
   
   constructor(private fb: FormBuilder, private _service: MedicalPortalService) {
     this.form = this.fb.group({
-      'fullName': ['', Validators.required],
-      'doctorName': ['', Validators.required],
-      'phone': ['', Validators.required],
-      'emailAddress': ['', Validators.required],
-      'appointmentDate': ['', Validators.required],
-      'appointmentTime': ['' ,Validators.required]
+      'nameOfDoctor': ['', Validators.required],
+      'gender': ['', Validators.required],
+      'age': ['', Validators.required],
+      'clinicAddress': ['', Validators.required],
+      'speciality': ['', Validators.required],
     })
   }
   
-  addDoctor(){
-
+  createDoctor() {
+    this.data = this.form.value;
+    this._service.addDoctor(this.data).subscribe((res) => {
+      console.log('added');
+      
+      this._service.sharedNotification('Doctor Added', 'OK')
+    })
   }
 }

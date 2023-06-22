@@ -4,9 +4,8 @@
 <p id="description">Thank you for registering. Please provide us with all below details to add you in our group.</p>
 <fieldset>
 </fieldset>
-<form [formGroup]="form" class="content" id="form">
+<!-- <form [formGroup]="form" class="content" id="form">
 <label id="name-label" for="name">Full Name<input id="name" formControlName="name" type="text" placeholder="Enter your name" required name="name"></label>
-<!-- <label id="email-label" for="email">Email Address<input id="email" type="email" placeholder="Enter your Email" required name="email"></label> -->
 <label id="number-label" for="age">Age<input id="age" formControlName="age" type="number" placeholder="Age" min="18" max="99" name="number"></label>
 <label for="gender">Gender
     <select id="dropdown" name="dropdown" formControlName="gender">
@@ -21,5 +20,66 @@
     <label id="fees-label" for="fees">Fees<input id="fees" type="number" placeholder="Enter your fees" required name="fees"></label>
     <label id="image-label" for="image">Image<input id="image" type="url" placeholder="Profile Photo" required name="image"></label>
 <button id="submit" type="submit" class="submit" (click)="addDoctor()"><b>Submit</b></button>
-  </form>
+  </form> -->
+  <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-3 mb-3 shadow-lg p-3 text-center">
+                <hr>
+                <form [formGroup]="form" class="text-left">
+                    <div class="form-group">
+                        <label>
+                            Full Name
+                        </label>
+                        <input type="text" required minlength="4" formControlName="nameOfDoctor" class="form-control"
+                            placeholder="Enter Full Name">
+                        <small *ngIf="form.controls['nameOfDoctor'].dirty && form.hasError('required','nameOfDoctor')"
+                            class="text-danger" style="margin-left: 0vh;">*Name is required</small>
+                    </div>
+                    <div class="form-group">
+                      <label>
+                          Gender
+                      </label>
+                      <input type="text" required minlength="4" formControlName="gender" class="form-control"
+                          placeholder="Enter Gender">
+                      <small *ngIf="form.controls['gender'].dirty && form.hasError('required','gender')"
+                          class="text-danger" style="margin-left: 0vh;">*Gender is required</small>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label>
+                        Age
+                    </label>
+                    <input type="text" required minlength="4" formControlName="age" class="form-control"
+                        placeholder="Enter Age">
+                    <small *ngIf="form.controls['age'].dirty && form.hasError('required','age')"
+                        class="text-danger" style="margin-left: 0vh;">*Age is required</small>
+                </div>
+                <div class="form-group">
+                  <label>
+                      Address
+                  </label>
+                  <input type="text" required minlength="4" formControlName="clinicAddress" class="form-control"
+                      placeholder="Enter Address">
+                  <small *ngIf="form.controls['clinicAddress'].dirty && form.hasError('required','clinicAddress')"
+                      class="text-danger" style="margin-left: 0vh;">*Address is required</small>
+              </div>
+              <div class="form-group">
+                <label>
+                    Speciality
+                </label>
+                <input type="text" required minlength="4" formControlName="speciality" class="form-control"
+                    placeholder="Enter Speciality">
+                <small *ngIf="form.controls['speciality'].dirty && form.hasError('required','speciality')"
+                    class="text-danger" style="margin-left: 0vh;">*Speciality is required</small>
+            </div>
+                    <button class="submit" 
+                        (click)="createDoctor()">Add Doctor</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
   </div>
+
+

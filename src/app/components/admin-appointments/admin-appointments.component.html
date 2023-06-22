@@ -5,12 +5,12 @@
     [columnDefs]="columnDefs">
 </ag-grid-angular> -->
 <div class="center">
-    <ul>
-      <li>
+    <ul >
+      <li *ngFor="let data of appoints">
         <div class="image">
           <img src="https://www.kindpng.com/picc/m/382-3825510_flat-people-icon-png-transparent-png.png" alt="">
           
-          <h4>Muskan Ranjan</h4>
+          <h4> {{data.fullName}} </h4>
         </div>
         
         <div class="text-group">
@@ -18,41 +18,10 @@
         </div>
         
         <div class="date-group">
-          <h4>Date - 30/04/2023</h4>
-          <h4>Time slot - 12:30pm</h4>
+          <h4>Date - {{data.appointmentDate}}</h4>
+          <h4>Time slot - {{data.appointmentTime}} </h4>
         </div>
       </li>
-      <li>
-        <div class="image">
-          <img src="https://www.kindpng.com/picc/m/382-3825510_flat-people-icon-png-transparent-png.png" alt="">
-          
-          <h4>Dev Raj</h4>
-        </div>
-        
-        <div class="text-group">
-           Appointment details are as follows:
-        </div>
-        
-        <div class="date-group">
-          <h4>Date - 30/04/2023</h4>
-          <h4>Time slot - 12:30pm</h4>
-        </div>
-      </li>
-      <li>
-        <div class="image">
-          <img src="https://www.kindpng.com/picc/m/382-3825510_flat-people-icon-png-transparent-png.png" alt="">
-          
-          <h4>Muskan Ranjan</h4>
-        </div>
-        
-        <div class="text-group">
-           Appointment details are as follows:
-        </div>
-        
-        <div class="date-group">
-          <h4>Date - 30/04/2023</h4>
-          <h4>Time slot - 12:30pm</h4>
-        </div>
-      </li>
+
     </ul>
   </div>

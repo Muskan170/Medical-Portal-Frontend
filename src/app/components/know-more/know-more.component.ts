@@ -23,6 +23,7 @@ export class KnowMoreComponent implements OnInit{
 
   gotoAppointment(){
     localStorage.setItem('doctor',this.specificDoctor.nameOfDoctor)
+    localStorage.setItem('doctorEmail', this.specificDoctor.email)
     this.router.navigate(['/user-dashboard/appoint'])
   }
 }
